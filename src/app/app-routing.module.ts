@@ -10,7 +10,7 @@ const routes: Routes = [
   {path: '', component: HomePageComponent},
   {path: 'news', component: NewsPageComponent},
   {path: 'login', component: LoginPageComponent},
-  {path: 'profile', component: ProfilePageComponent}
+  {path: 'profile', loadChildren: './profile-page/profile-page.module#ProfilePageModule'}
 ];
 
 @NgModule({
