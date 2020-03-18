@@ -6,10 +6,18 @@ import { AppComponent } from './app.component';
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { HomePageComponent } from './home-page/home-page.component';
+import { NewsPageComponent } from './news-page/news-page.component';
+import { ProfilePageComponent } from './profile-page/profile-page.component';
+import { LoginPageComponent } from './login-page/login-page.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomePageComponent,
+    NewsPageComponent,
+    ProfilePageComponent,
+    LoginPageComponent
   ],
   imports: [
     BrowserModule,
