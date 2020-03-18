@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'test2-app';
+  navBarOpen = false;
+
+  toggleNavBar(): void {
+    this.navBarOpen = !this.navBarOpen;
+  }
 }
