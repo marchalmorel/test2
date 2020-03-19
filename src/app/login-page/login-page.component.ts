@@ -48,6 +48,8 @@ export class LoginPageComponent implements OnInit {
       this.form.reset();
       this.router.navigate(['/profile']);
       this.submitted = false;
+    }, error => {
+      this.submitted = false;
     })
 
   }
