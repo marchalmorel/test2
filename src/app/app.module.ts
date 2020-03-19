@@ -10,12 +10,13 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { NewsPageComponent } from './news-page/news-page.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
     NewsPageComponent,
-    LoginPageComponent
+    LoginPageComponent,
   ],
   imports: [
     BrowserModule,

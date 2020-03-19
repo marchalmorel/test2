@@ -8,13 +8,14 @@ import {SpinnerService} from "./shared/services/spinner.service";
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit{
+
   navBarOpen = false;
   isAuth = false;
   spinnerStatus = false;
 
   constructor(
     private auth: AuthService,
-    private spinner: SpinnerService
+    private spinner: SpinnerService,
   ) {}
 
   ngOnInit() {
@@ -27,8 +28,8 @@ export class AppComponent implements OnInit{
     })
   }
 
-
   toggleNavBar(): void {
     this.navBarOpen = !this.navBarOpen;
   }
+
 }

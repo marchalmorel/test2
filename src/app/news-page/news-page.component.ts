@@ -18,5 +18,4 @@ export class NewsPageComponent implements OnInit {
       this.articles = response.articles;
     })
   }
-
 }
