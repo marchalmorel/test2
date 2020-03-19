@@ -28,7 +28,8 @@
       </li>
     </ul>
 
-      <button class="btn btn-outline-light my-2 my-sm-0" routerLink="/login" type="submit">Sign in</button>
+      <button *ngIf="!isAuth" class="btn btn-outline-light my-2 my-sm-0" routerLink="/login" type="submit">Log in</button>
+      <button *ngIf="isAuth" class="btn btn-outline-light my-2 my-sm-0" routerLink="/login" (click)="auth.logout()" type="submit">Log out</button>
   </div>
 </nav>
 

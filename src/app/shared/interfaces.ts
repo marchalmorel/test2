@@ -1,4 +1,10 @@
 export interface User {
-  login: string,
-  password: string
+  email: string,
+  password: string,
+  returnSecureToken?: boolean
+}
+
+export interface FireBaseAuthResponse {
+  idToken: string,
+  expiresIn: string
 }

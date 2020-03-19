@@ -16,9 +16,9 @@
            [ngClass]="{'is-invalid': form.get('password').invalid && form.get('password').touched,
                        'is-valid': form.get('password').valid}">
     <div class="invalid-feedback">
-      Password must be 5 characters at minimum
+      Password must be 6 characters at minimum
     </div>
 
   </div>
-  <button type="submit" class="btn btn-primary btnCursor" [disabled]="form.invalid" >Submit</button>
+  <button type="submit" class="btn btn-primary btnCursor" [disabled]="form.invalid || submitted" >Submit</button>
 </form>

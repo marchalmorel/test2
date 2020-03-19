@@ -13,7 +13,8 @@ import {CommonModule} from "@angular/common";
       {path: '', component: ProfilePageComponent}
     ])
   ],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: []
 })
 
 export class ProfilePageModule {
