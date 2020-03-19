@@ -1,4 +1,6 @@
 export interface Environment {
   production: boolean
-  apiKey: string
+  bdApiKey: string
+  newsApiKey: string
+
 }

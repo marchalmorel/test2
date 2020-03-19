@@ -4,6 +4,7 @@ import {FireBaseAuthResponse, User} from "../interfaces";
 import {BehaviorSubject, Observable} from "rxjs";
 import {environment} from "../../../environments/environment";
 import {tap} from "rxjs/operators";
+import {httpWrapperService} from "./httpWrapper.service";
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +14,8 @@ export class AuthService {
   isAuthenticated$ = new BehaviorSubject<boolean>(false);
   constructor(
     private http: HttpClient,
+    private httpWrapperService: httpWrapperService
+
   ) {}
 
   get token(): string {
@@ -24,11 +27,13 @@ export class AuthService {
     return localStorage.getItem('fireBase-token')
   }
 
-  login(user: User): Observable<any> {
-    return this.http.post(`https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${environment.apiKey}`, user)
+  login(user: User): Observable<User> {
+    return this.httpWrapperService.httpWrapper(
+      this.http.post(`https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${environment.bdApiKey}`, user)
       .pipe(
         tap(this.setToken)
       )
+    );
   }
 
   logout() {
