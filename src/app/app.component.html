@@ -38,7 +38,7 @@
 </div>
 
 
-<div *ngIf="spinnerStatus" class="spinnerWrapper d-flex justify-content-center align-items-center">
+<div class="spinnerWrapper" [hidden]="!spinnerStatus">
   <div class="spinner-border text-primary spinner text-warning" >
     <span class="sr-only">Loading...</span>
   </div>

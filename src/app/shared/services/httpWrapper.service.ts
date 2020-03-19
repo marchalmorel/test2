@@ -14,6 +14,7 @@ export class httpWrapperService {
   ) {}
 
   httpWrapper(obs: Observable<any>): Observable<any> {
+    console.log('news is work');
     this.spinner.spinnerStart();
 
     return obs.pipe(
